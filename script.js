@@ -17,7 +17,8 @@ const dict = {
     fact_2_v: "30–60 min la pas, ideal la apus",
     fact_3_k: "Regula de aur",
     fact_3_v: "respectă liniștea localnicilor",
-    map_link: "Deschide în OpenStreetMap →",
+    map_link_osm: "OpenStreetMap →",
+    map_link_gmaps: "Google Maps →",
     title_3: "Credite foto",
     credits_text: "Imaginile sunt fotografii reale, folosite cu licențe libere (CC / GFDL). Detalii complete în fișierul CREDITS.md din proiect.",
     footer_note: "Un proiect personal dedicat satului Charlotenburg (Șarlota)."
@@ -39,7 +40,8 @@ const dict = {
     fact_2_v: "30–60 min walk, best near sunset",
     fact_3_k: "Golden rule",
     fact_3_v: "respect locals’ peace and privacy",
-    map_link: "Open in OpenStreetMap →",
+    map_link_osm: "OpenStreetMap →",
+    map_link_gmaps: "Google Maps →",
     title_3: "Photo credits",
     credits_text: "All visuals are real photographs used under free licenses (CC / GFDL). Full details in CREDITS.md.",
     footer_note: "A personal project dedicated to Charlotenburg (Șarlota)."
