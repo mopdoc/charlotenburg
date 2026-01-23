@@ -1,110 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charlotenburg, Romania – The Unique Circular Village</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f8f8f8; color: #222; margin: 0; padding: 0; }
-    header { background: #2d3e50; color: #fff; padding: 2rem 1rem 1rem 1rem; text-align: center; }
-    main { max-width: 800px; margin: 2rem auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; }
-    h1 { margin-top: 0; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
-    .gallery img { border-radius: 8px; max-width: 240px; width: 100%; height: auto; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
-    .info { margin-bottom: 2rem; }
-    footer { text-align: center; color: #888; padding: 1rem; font-size: 0.95em; }
-    @media (max-width: 600px) { main { padding: 1rem; } }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charlotenburg (Șarlota) — satul circular din Banat</title>
+  <meta name="description" content="Charlotenburg (Șarlota), Timiș — singurul sat circular din România. O experiență vizuală simplă, construită în jurul imaginilor aeriene reale." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Charlotenburg, Timiș County, Romania</h1>
-    <h2>The Only Circular Village in Romania</h2>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Charlotenburg home">
+      <span class="dot"></span>
+      <span>Charlotenburg</span>
+    </a>
+
+    <nav class="nav">
+      <a href="#village" data-i18n="nav_village">Satul</a>
+      <a href="#visit" data-i18n="nav_visit">Vizită</a>
+      <a href="#credits" data-i18n="nav_credits">Credite</a>
+    </nav>
+
+    <div class="lang">
+      <button class="lang-btn is-active" type="button" data-lang="ro" aria-pressed="true">RO</button>
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
   </header>
-  <main>
-    <section class="info">
-      <h3>About Charlotenburg</h3>
-      <p>
-        Charlotenburg is a remarkable village located in Timiș County, western Romania, about 45 km northwest of Timișoara. Founded in 1771 by Swabian colonists, it is the only circular village in Romania and a rare example of planned rural architecture in Eastern Europe.
-      </p>
-      <p>
-        The village was designed with houses arranged in a perfect circle around a central square, originally for defensive and community purposes. Today, Charlotenburg is a protected architectural site, known for its tranquil rural atmosphere, sunflower fields, and unique layout.
-      </p>
-      <h3>Location</h3>
-      <p>
-        <strong>Coordinates:</strong> 45°59′N 21°2′E<br>
-        <strong>Region:</strong> Banat, Timiș County, Romania<br>
-        <a href="https://goo.gl/maps/4Qw1Qw1Qw1Qw1Qw1A" target="_blank">View on Google Maps</a>
-      </p>
-    </section>
-    <section>
-      <h3>Gallery</h3>
-      <div class="gallery">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Charlotenburg%2C_Timis%2C_Romania_-_aerial_view.jpg" alt="Aerial view of Charlotenburg" title="Aerial view of Charlotenburg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Charlotenburg_circular_village.jpg" alt="Charlotenburg circular layout" title="Charlotenburg circular layout">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Charlotenburg_village_sunflowers.jpg" alt="Sunflower fields in Charlotenburg" title="Sunflower fields in Charlotenburg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Charlotenburg_central_square.jpg" alt="Central square of Charlotenburg" title="Central square of Charlotenburg">
+
+  <main id="top" class="snap">
+    <!-- Scene 1 -->
+    <section class="scene" id="village" data-bg="assets/aerial_top.jpg" aria-label="Aerial view top">
+      <div class="overlay"></div>
+      <div class="content">
+        <p class="eyebrow" data-i18n="eyebrow_1">Timiș • Banat</p>
+        <h1 data-i18n="title_1">Singurul sat circular din România</h1>
+        <p class="lead" data-i18n="lead_1">
+          Un inel perfect de case, o biserică în centru și liniștea Banatului în jur.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="#visit" data-i18n="cta_1">Planifică o vizită</a>
+          <button class="btn ghost" id="toggle-ui" type="button" data-i18n="cta_2">Ascunde textul</button>
+        </div>
+      </div>
+
+      <div class="hint" aria-hidden="true">
+        <span class="mouse"></span>
+        <span data-i18n="scroll_hint">derulează</span>
       </div>
     </section>
-    <section>
-      <h3>Did You Know?</h3>
-      <ul>
-        <li>Charlotenburg is the only circular village in Romania and one of the few in Europe.</li>
-        <li>The village was named after Charlotte, the wife of an Austrian official.</li>
-        <li>It is a protected architectural monument and a popular destination for photographers and history enthusiasts.</li>
-      </ul>
+
+    <!-- Scene 2 -->
+    <section class="scene" id="visit" data-bg="assets/aerial_angle.jpg" aria-label="Aerial view angle">
+      <div class="overlay"></div>
+      <div class="content compact">
+        <h2 data-i18n="title_2">Vizită pe scurt</h2>
+        <ul class="facts">
+          <li>
+            <span class="k" data-i18n="fact_1_k">Ce vezi</span>
+            <span class="v" data-i18n="fact_1_v">cercul complet, centrul verde, case șvăbești, biserica</span>
+          </li>
+          <li>
+            <span class="k" data-i18n="fact_2_k">Cât durează</span>
+            <span class="v" data-i18n="fact_2_v">30–60 min la pas, ideal la apus</span>
+          </li>
+          <li>
+            <span class="k" data-i18n="fact_3_k">Regula de aur</span>
+            <span class="v" data-i18n="fact_3_v">respectă liniștea localnicilor</span>
+          </li>
+        </ul>
+
+        <div class="links">
+          <a class="mini" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=Charlotenburg%2C%20Timi%C8%99" data-i18n="map_link">
+            Deschide în OpenStreetMap →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credits -->
+    <section class="scene footer" id="credits" data-bg="assets/aerial_top.jpg" aria-label="Credits">
+      <div class="overlay strong"></div>
+      <div class="content compact">
+        <h2 data-i18n="title_3">Credite foto</h2>
+        <p class="muted" data-i18n="credits_text">
+          Imaginile sunt fotografii reale, folosite cu licențe libere (CC / GFDL). Detalii complete în fișierul CREDITS.md din proiect.
+        </p>
+
+        <div class="credit-cards">
+          <article class="card">
+            <h3>„Aerial view of Charlottenburg”</h3>
+            <p class="muted">
+              © Alen Jelco Todorov — CC BY‑SA 4.0
+              <br><a class="mini" target="_blank" rel="noopener"
+                href="https://commons.wikimedia.org/wiki/File:Aerial_view_of_Charlottenburg.jpg">Wikimedia Commons →</a>
+            </p>
+          </article>
+          <article class="card">
+            <h3>„CharlottenburgBanat2”</h3>
+            <p class="muted">
+              © Erhard Berwanger (dewiki user „Eddiebw”) — CC BY‑SA 3.0 / GFDL
+              <br><a class="mini" target="_blank" rel="noopener"
+                href="https://commons.wikimedia.org/wiki/File:CharlottenburgBanat2.jpg">Wikimedia Commons →</a>
+            </p>
+          </article>
+        </div>
+
+        <p class="tiny muted">
+          <span data-i18n="footer_note">Un proiect personal dedicat satului Charlotenburg (Șarlota).</span>
+        </p>
+      </div>
     </section>
   </main>
-  <footer>
-    &copy; 2026 Charlotenburg Village | <a href="https://en.wikipedia.org/wiki/Charlotenburg,_Timi%C8%99" target="_blank">Learn more on Wikipedia</a>
-  </footer>
-</body>
-</html>
-      color: #f5f5f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .card {
-      max-width: 600px;
-      padding: 2.5rem 3rem;
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 18px;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-    h1 {
-      margin: 0 0 0.75rem;
-      font-size: 2rem;
-    }
-    p {
-      margin: 0.25rem 0;
-      line-height: 1.6;
-      color: #cbd5f5;
-    }
-    .tag {
-      display: inline-block;
-      margin-top: 1.25rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.12);
-      color: #7dd3fc;
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-  </style>
-</head>
-<body>
-  <main class="card">
-    <h1>Charlotenburg – Building systems that last</h1>
-    <p>Cloud-native architectures, DevOps, and operational clarity.</p>
-    <p>More coming soon. For now, this page is just a quiet placeholder.</p>
-    <span class="tag">Work in progress</span>
-  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
